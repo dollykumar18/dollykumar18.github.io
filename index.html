@@ -6,51 +6,63 @@
     <title>Dolly Kumar Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            overflow-x: hidden;
         }
 
-        header {
+        /* Sidebar Menu */
+        .sidebar {
             background-color: #0077cc;
             color: white;
-            padding: 20px 0;
+            width: 200px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            position: fixed;
+            height: 100%;
+        }
+
+        .sidebar h2 {
             text-align: center;
+            margin-bottom: 30px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        nav {
-            margin-top: 10px;
-        }
-
-        nav a {
+        .sidebar a {
             color: white;
-            margin: 0 15px;
             text-decoration: none;
-            font-weight: bold;
+            padding: 15px 20px;
+            display: block;
+            transition: background 0.3s;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        .sidebar a:hover {
+            background-color: #005fa3;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: 200px;
+            padding: 20px;
+            flex: 1;
+            overflow-y: auto;
+            scroll-behavior: smooth;
         }
 
         section {
+            min-height: 100vh;
             padding: 50px 20px;
-            max-width: 900px;
-            margin: auto;
+            border-bottom: 1px solid #ddd;
         }
 
         h2 {
             color: #0077cc;
-            margin-bottom: 20px;
         }
 
+        /* Project cards */
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -58,10 +70,19 @@
         }
 
         .project {
-            background: white;
+            background: #f4f4f4;
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .project a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
         }
 
         footer {
@@ -70,73 +91,64 @@
             background-color: #333;
             color: white;
         }
-
-        .contact a {
-            color: #0077cc;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Dolly Kumar</h1>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <div class="sidebar">
+        <h2>Dolly Kumar</h2>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I am Dolly Kumar, a QA Engineer and Automation enthusiast. I enjoy building automation frameworks, testing complex systems, and continuously improving product quality.</p>
-    </section>
+    <div class="main">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I am Dolly Kumar, a QA Engineer and Automation enthusiast. I enjoy building automation frameworks, testing complex systems, and continuously improving product quality.</p>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Robot Framework & Python Automation</li>
-            <li>QA Testing & Test Case Design</li>
-            <li>Database Design & Query Optimization (MySQL, PostgreSQL, MongoDB)</li>
-            <li>CI/CD & GitHub Workflows</li>
-            <li>Docker & Devcontainer Setup</li>
-        </ul>
-    </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Robot Framework & Python Automation</li>
+                <li>QA Testing & Test Case Design</li>
+                <li>Database Design & Query Optimization (MySQL, PostgreSQL, MongoDB)</li>
+                <li>CI/CD & GitHub Workflows</li>
+                <li>Docker & Devcontainer Setup</li>
+            </ul>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Automation Framework</h3>
-                <p>Developed a Robot Framework automation framework for testing SCADA systems with Docker and Devcontainer integration.</p>
-                <a href="#">View Project</a>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Automation Framework</h3>
+                    <p>Developed a Robot Framework automation framework for testing SCADA systems with Docker and Devcontainer integration.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Database Optimizer</h3>
+                    <p>Designed and optimized queries for relational and NoSQL databases to improve performance by 40%.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>QA Test Suite</h3>
+                    <p>Created a robust QA test suite covering web and desktop applications with automated reporting.</p>
+                    <a href="#">View Project</a>
+                </div>
             </div>
-            <div class="project">
-                <h3>Database Optimizer</h3>
-                <p>Designed and optimized queries for relational and NoSQL databases to improve performance by 40%.</p>
-                <a href="#">View Project</a>
-            </div>
-            <div class="project">
-                <h3>QA Test Suite</h3>
-                <p>Created a robust QA test suite covering web and desktop applications with automated reporting.</p>
-                <a href="#">View Project</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p class="contact">Email: <a href="mailto:your.email@example.com">your.email@example.com</a> | GitHub: <a href="https://github.com/dollykumar" target="_blank">github.com/dollykumar</a></p>
-    </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/dollykumar" target="_blank">github.com/dollykumar</a></p>
+        </section>
 
-    <footer>
-        &copy; 2025 Dolly Kumar. All rights reserved.
-    </footer>
+        <footer>
+            &copy; 2025 Dolly Kumar. All rights reserved.
+        </footer>
+    </div>
 </body>
 </html>
