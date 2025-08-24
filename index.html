@@ -10,7 +10,6 @@
             font-family: Arial, sans-serif;
             display: flex;
             height: 100vh;
-            overflow-x: hidden;
         }
 
         /* Sidebar Menu */
@@ -18,12 +17,9 @@
             background-color: #0077cc;
             color: white;
             width: 200px;
-            flex-shrink: 0;
             display: flex;
             flex-direction: column;
             padding-top: 20px;
-            position: fixed;
-            height: 100%;
         }
 
         .sidebar h2 {
@@ -31,31 +27,35 @@
             margin-bottom: 30px;
         }
 
-        .sidebar a {
+        .sidebar button {
+            background: none;
+            border: none;
             color: white;
-            text-decoration: none;
             padding: 15px 20px;
-            display: block;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
             transition: background 0.3s;
         }
 
-        .sidebar a:hover {
+        .sidebar button:hover {
             background-color: #005fa3;
         }
 
         /* Main content */
         .main {
-            margin-left: 200px;
-            padding: 20px;
             flex: 1;
+            padding: 20px;
             overflow-y: auto;
-            scroll-behavior: smooth;
         }
 
         section {
+            display: none; /* hide all sections initially */
             min-height: 100vh;
-            padding: 50px 20px;
-            border-bottom: 1px solid #ddd;
+        }
+
+        section.active {
+            display: block; /* show active section */
         }
 
         h2 {
@@ -96,14 +96,14 @@
 <body>
     <div class="sidebar">
         <h2>Dolly Kumar</h2>
-        <a href="#about">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <button onclick="showSection('about')">About Me</button>
+        <button onclick="showSection('skills')">Skills</button>
+        <button onclick="showSection('projects')">Projects</button>
+        <button onclick="showSection('contact')">Contact</button>
     </div>
 
     <div class="main">
-        <section id="about">
+        <section id="about" class="active">
             <h2>About Me</h2>
             <p>Hello! I am Dolly Kumar, a QA Engineer and Automation enthusiast. I enjoy building automation frameworks, testing complex systems, and continuously improving product quality.</p>
         </section>
@@ -150,5 +150,13 @@
             &copy; 2025 Dolly Kumar. All rights reserved.
         </footer>
     </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
