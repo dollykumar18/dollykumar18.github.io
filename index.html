@@ -95,55 +95,145 @@
 </head>
 <body>
     <div class="sidebar">
-        <h2>Dolly Kumar</h2>
-        <button onclick="showSection('about')">About Me</button>
-        <button onclick="showSection('skills')">Skills</button>
+        <h3>Navigation</h3>
+        <h4>Go to</h4>
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('skills')">Skill Summary</button>
+        <button onclick="showSection('experience')">Work Experience</button>
         <button onclick="showSection('projects')">Projects</button>
+        <button onclick="showSection('education')">Education</button>
         <button onclick="showSection('contact')">Contact</button>
     </div>
 
     <div class="main">
-        <section id="about" class="active">
-            <h2>About Me</h2>
-            <p>Hello! I am Dolly Kumar, a QA Engineer and Automation enthusiast. I enjoy building automation frameworks, testing complex systems, and continuously improving product quality.</p>
+        <section id="home" class="active">
+            <h1>Dolly Kumar</h1>
+            <h4>SDET | QA Automation | QA Analyst</h4>
+            <a href="https://www.linkedin.com/in/dolly-kumar-a3aaaa25a/">LinkedIn</a>
+            <a href="https://github.com/dollykumar18">GitHub</a>
+            <a href="email.dollykumar@gmail.com">Email</a>
+
+            <h4>Profile Summary</h4>
+            <p>ISTQB certified results-driven SDET with 6+ years of experience in QA Automation, Manual Testing, API Testing, and Test Framework Development. Proficient in designing and executing Test Plans, Test Cases, and Automation Scripts for Web, API, and Desktop applications. Hands-on experience with Python, Selenium, Robot Framework, Cypress, CI/CD pipelines, API testing (REST/SOAP), and SQL. Adept at working in Agile/Scrum environments, collaborating with cross-functional teams, and ensuring high-quality software delivery.</p>
+            <br><br><br>
+            <p>Thanks for visiting my portfolio! Feel free to reach out via email or LinkedIn for collaborations, opportunities, or further discussions.</p>
         </section>
 
         <section id="skills">
-            <h2>Skills</h2>
+            <h2>Profile Summary</h2>
+            <h4>Core Competencies</h4>
             <ul>
-                <li>Robot Framework & Python Automation</li>
-                <li>QA Testing & Test Case Design</li>
-                <li>Database Design & Query Optimization (MySQL, PostgreSQL, MongoDB)</li>
-                <li>CI/CD & GitHub Workflows</li>
-                <li>Docker & Devcontainer Setup</li>
+                <li>Languages: Python, Java, C, C++, HTML, SQL <br>
+                <li>Automation Tools: Selenium WebDriver, Robot Framework, Cypress, QTP/UFT, JMeter </li>
+                <li>API Testing: Postman, SOAP UI, REST, SOAP </li>
+                <li>CI/CD & DevOps: GitLab CI/CD, Jenkins, Docker, Kubernetes </li>
+                <li>Test Management: JIRA, Xray, HP ALM/Quality Center </li>
+                <li>Databases: MySQL, PostgreSQL, Oracle, SQL Server </li>
+                <li>OS: Windows, Linux, UNIX </li>
+                <li>Testing Types: Functional, Regression, Smoke, Sanity, API, E2E, Cross-Browser, UAT </li>
             </ul>
+            <br><br><br>
+
+            <h2>Certification</h2>
+            <h4>Certified Tester Foundation Level - ISTQB</h4> 
+            <br><br><br>
+            <p>Thanks for visiting my portfolio! Feel free to reach out via email or LinkedIn for collaborations, opportunities, or further discussions.</p>
+        
+        </section>  
+         <section id="experience">
+            <h2>Work Experience</h2>
+            <h4>Software Developer In Test | Willowglen Systems | (June 2023- Present ) </h4>
+            <ul>
+                <li>Designed, documented, and executed Functional & Non-Functional Test Plans, including regression, integration, and failover testing strategies.<br>
+                <li>Developed Python-based Robot Framework test automation scripts to validate critical system functionalities across multiple environments.</li>
+                <li>Configured and maintained a scalable, reusable automation framework, ensuring modularity for faster test script creation and maintenance.</li>
+                <li>Integrated test execution results into JIRA Xray via REST APIs, enabling real-time reporting of test coverage and defect trends.</li>
+                <li>Executed manual and automated integration testing, including API validation, UI verification, and database checks.</li>
+                <li>Conducted performance and negative scenario testing to evaluate system resilience under high load.</li>
+                <li>Validated CI/CD pipelines in GitLab ensuring automated tests were triggered on every commit and merge.</li>
+                <li>Participated in code reviews, pair programming, and automation best-practice sessions to improve test quality.</li>
+                <li>Collaborated with product managers, architects, and developers to align QA activities with sprint deliverables and long-term product goals.</li>
+                <li><h5>Environment: Python, Robot Framework, Docker, Kubernetes, GitLab CI/CD, Postman, Redis, PostgreSQL, VMware, JIRA Xray, Confluence</h5></li>  
+            </ul>
+            <br><br><br>
+            <h4>Selenium Automation Tester | Walmart | (Jan 2022- May 2023) </h4>
+            <ul>
+                <li>Developed and maintained automated UI and API test suites using Selenium WebDriver (Java), Cypress, and Postman for REST API testing.</li>
+                <li>Built Cypress test automation framework from scratch with reporting and parallel execution capabilities</li>
+                <li>Performed functional, regression, system, security, and UAT testing across web and mobile platforms.</li>
+                <li>Designed and executed API tests for SOAP and REST services using SOAP UI, validating XML and JSON payloads.</li>
+                <li>Conducted database validation using complex SQL queries against Oracle and SQL Server databases.</li>
+                <li>Reduced regression cycle execution time by 25% through optimization and stabilization of automation scripts.</li>
+                <li>Worked in Agile/Scrum environment, actively participating in sprint planning, backlog grooming, and daily stand-ups.</li>
+                <li><h5>Environment: Java, Selenium WebDriver, Cypress, JUnit, TestNG, Jenkins, SOAP UI, Oracle, SQL, JIRA</h5></li>
+            </ul>
+             <br><br><br>
+            <h4>QA Analyst | Syncreon | (Jan 2020- Dec 2021) </h4>
+            <ul>
+                <li>Created detailed test plans and mapped test cases to requirements in HP ALM ensuring complete coverage.</li>
+                <li>Automated functional regression suites using Selenium WebDriver (Java) with TestNG.</li>
+                <li>Performed end-to-end testing on desktop, mobile, and tablet platforms (Windows, Android, iOS).</li>
+                <li>Used SQL queries to validate backend data consistency for API responses in SOAP UI.</li>
+                <li>Reported, tracked, and verified defects in HP ALM, collaborating closely with developers for resolution.</li>
+                <li>Participated in UAT testing, ensuring alignment of delivered features with business expectations.</li>
+                <li><h5>Environment: Java, Selenium, TestNG, Jenkins, HP ALM, SQL, SOAP UI, JIRA</h5></li>
+            </ul>
+             <br><br><br>
+            <h4>QA Analyst | Simplilearn | (Jan 2017- April 2019) </h4>
+            <ul>
+                <li>Authored and executed test cases for functional, regression, and integration testing of web-based applications.</li>
+                <li>Managed test cases and defect tracking using Quality Center and Bugzilla.</li>
+                <li>Performed smoke, sanity, black box, and performance testing in Agile sprints.</li>
+                <li>Created and maintained automated regression scripts using Selenium WebDriver with Java and TestNG.</li>
+                <li>Documented lessons learned and defect root cause analysis to improve future releases.</li>
+                <li><h5>nment: Java, Selenium, TestNG, HP ALM, Bugzilla, JIRA, SQL</h5></li>
+            </ul>
+
+            <br><br><br>
+            <p>Thanks for visiting my portfolio! Feel free to reach out via email or LinkedIn for collaborations, opportunities, or further discussions.</p>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
+            <h4>Here are some of the projects I’ve worked on. Click on the links to explore the repositories.</h4>
             <div class="projects">
                 <div class="project">
-                    <h3>Automation Framework</h3>
+                    <h3>Robot Framework Selenium Request</h3>
                     <p>Developed a Robot Framework automation framework for testing SCADA systems with Docker and Devcontainer integration.</p>
-                    <a href="#">View Project</a>
+                    <a href="https://github.com/dollykumar18/RobotFrameworm-Selenium-Requests">View Project</a>
                 </div>
                 <div class="project">
-                    <h3>Database Optimizer</h3>
-                    <p>Designed and optimized queries for relational and NoSQL databases to improve performance by 40%.</p>
-                    <a href="#">View Project</a>
-                </div>
-                <div class="project">
-                    <h3>QA Test Suite</h3>
-                    <p>Created a robust QA test suite covering web and desktop applications with automated reporting.</p>
-                    <a href="#">View Project</a>
+                    <h3>Postman Rest APIS</h3>
+                    <p> Postman Rest APIS description</p>
+                    <a href="https://github.com/dollykumar18/Postmam-Rest-API-Tests">View Project</a>
                 </div>
             </div>
+             <br><br><br>
+            <p>Thanks for visiting my portfolio! Feel free to reach out via email or LinkedIn for collaborations, opportunities, or further discussions.</p>
         </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <h4>Project Management </h4>
+            <ul>
+                <li>Humber College</li>
+                <li>Ontario Canada</li>
+            </ul>
+            <h4>Bachelor's Degree in Computer Science </h4>
+             <ul>
+                <li>DAV University</li>
+                <li>India</li>
+            </ul>
+        </section> 
+
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>Email: <a href="mailto:email.dollykumar@gmail.com">email.dollykumar@gmail.com</a></p>
             <p>GitHub: <a href="https://github.com/dollykumar" target="_blank">github.com/dollykumar</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/dolly-kumar-a3aaaa25a/" target="_blank">https://www.linkedin.com/in/dolly-kumar-a3aaaa25a/r</a></p>
+            <br><br><br>
+            <p>Thanks for visiting my portfolio! Feel free to reach out via email or LinkedIn for collaborations, opportunities, or further discussions.</p>
         </section>
 
         <footer>
